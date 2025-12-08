@@ -1,46 +1,110 @@
-// script.js
+/* =======================
+   HERO SLIDESHOW
+======================= */
+const slides = document.querySelectorAll('.hero-slideshow .slide');
+let currentSlide = 0;
 
-// DROPDOWN MENU
-document.addEventListener("DOMContentLoaded", () => {
-  const dropdown = document.querySelector(".dropdown");
-  const dropdownBtn = dropdown.querySelector(".dropdown-btn");
-  const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+}
 
-  // Toggle dropdown on click
-  dropdownBtn.addEventListener("click", (e) => {
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+/* =======================
+   NAV DROPDOWN
+======================= */
+const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+
+dropdownBtns.forEach(btn => {
+  btn.addEventListener('click', e => {
     e.preventDefault();
-    dropdownMenu.classList.toggle("show");
-    // Toggle aria-expanded for accessibility
-    const expanded = dropdownBtn.getAttribute("aria-expanded") === "true";
-    dropdownBtn.setAttribute("aria-expanded", !expanded);
-  });
-
-  // Close dropdown if clicked outside
-  document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target)) {
-      dropdownMenu.classList.remove("show");
-      dropdownBtn.setAttribute("aria-expanded", "false");
-    }
+    const dropdown = btn.parentElement;
+    dropdown.classList.toggle('active');
   });
 });
 
-// HERO SLIDESHOW (optional if you have slideshow)
-let slideIndex = 0;
-const slides = document.querySelectorAll(".hero-slideshow img");
-function showSlides() {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slideIndex++;
-  if (slideIndex > slides.length) slideIndex = 1;
-  slides[slideIndex - 1].classList.add("active");
-  setTimeout(showSlides, 5000); // change every 5 seconds
-}
-if(slides.length > 0){
-  showSlides();
-}
+/* =======================
+   MOBILE NAV TOGGLE
+======================= */
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
 
-// NAV TOGGLE FOR MOBILE
-const navToggle = document.getElementById("nav-toggle");
-const navLinks = document.getElementById("nav-links");
-navToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
+
+/* =======================
+   CITIZENSHIP SELECT
+======================= */
+const citizenship = document.getElementById('citizenship');
+const idInput = document.getElementById('idNumber');
+const passportInput = document.getElementById('passportNumber');
+
+citizenship.addEventListener('change', () => {
+  if(citizenship.value === 'citizen'){
+    idInput.style.display = 'block';
+    passportInput.style.display = 'none';
+    idInput.required = true;
+    passportInput.required = false;
+  } else if(citizenship.value === 'non-citizen'){
+    idInput.style.display = 'none';
+    passportInput.style.display = 'block';
+    idInput.required = false;
+    passportInput.required = true;
+  } else {
+    idInput.style.display = 'none';
+    passportInput.style.display = 'none';
+    idInput.required = false;
+    passportInput.required = false;
+  }
+});
+
+/* =======================
+   QUICK ESTIMATE BUTTON
+======================= */
+const quickBtn = document.getElementById('quick-estimate');
+quickBtn.addEventListener('click', () => {
+  alert("Quick estimate feature coming soon!");
+});
+
+/* =======================
+   GALLERY MODAL
+======================= */
+const galleryItems = document.querySelectorAll('.gallery-item');
+const modal = document.getElementById('img-modal');
+const modalImg = document.getElementById('modal-img');
+const modalClose = document.getElementById('modal-close');
+
+galleryItems.forEach(item => {
+  item.addEventListener('click', () => {
+    modalImg.src = item.src;
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+  });
+});
+
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
+});
+
+modal.addEventListener('click', e => {
+  if(e.target === modal) {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+  }
+});
+
+/* =======================
+   CURRENT YEAR FOOTER
+======================= */
+const yearEl = document.getElementById('year');
+yearEl.textContent = new Date().getFullYear();
