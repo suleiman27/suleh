@@ -1,245 +1,359 @@
-/* -------------------------------------------
-   BASE
---------------------------------------------*/
+/* ==============================
+   RESET AND BASE STYLES
+   ============================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f5faf4;
-  color: #222;
   line-height: 1.6;
+  color: #2f3d27; /* dark green text */
+  background: #f0f4f0; /* very light green background */
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* -------------------------------------------
-   HEADER
---------------------------------------------*/
+/* ==============================
+   HEADER / NAV
+   ============================== */
 .site-header {
-  background: #0b3d1f;
-  padding: 10px 0;
-  color: #fff;
+  background: #e6f2e6; /* light green */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
+.brand {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background: #0b3d1f;
-  padding: 10px 0;
+.brand .accent {
+  color: #2f7a2f; /* deeper green accent */
+}
+
+.nav-links {
   list-style: none;
-  margin-top: 10px;
-  border-radius: 4px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  padding: 0.5rem 0;
+  display: block;
+  color: #2f3d27;
+  font-weight: bold;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #e6f2e6;
+  list-style: none;
+  padding: 0.5rem 0;
+  border: 1px solid #c4e1c4;
+  display: none;
+  min-width: 200px;
+  z-index: 1000;
 }
 
 .dropdown-menu li a {
+  padding: 0.5rem 1rem;
   display: block;
-  padding: 8px 20px;
+  color: #2f3d27;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #2f7a2f; /* deep green */
   color: #fff;
 }
 
-.show {
-  display: block !important;
+.btn-outline {
+  border: 1px solid #2f7a2f;
+  color: #2f7a2f;
+  background: transparent;
 }
 
-/* -------------------------------------------
+/* ==============================
    HERO
---------------------------------------------*/
+   ============================== */
 .hero {
   position: relative;
-  height: 450px;
+  height: 500px;
   overflow: hidden;
+  background: #d8edd8;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(47,122,47,0.3);
+  z-index: 1;
 }
 
 .hero-slideshow {
-  position: absolute;
-  width: 100%;
+  position: relative;
   height: 100%;
 }
 
 .hero-slideshow img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* No cropping */
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
-.hero-slideshow .active {
+.hero-slideshow img.active {
   opacity: 1;
 }
 
 .hero-content {
   position: relative;
-  padding-top: 140px;
-  color: white;
-  z-index: 10;
+  z-index: 2;
+  color: #fff;
   text-align: center;
-  text-shadow: 1px 1px 3px black;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* -------------------------------------------
-   SAFARI PACKAGE CARDS
---------------------------------------------*/
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1b3a1b;
+}
+
+.hero-content p.lead {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #2f3d27;
+}
+
+.ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* ==============================
+   MAIN SECTIONS
+   ============================== */
+.section {
+  padding: 3rem 2rem;
+  background: #f0f4f0;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #2f7a2f;
+}
+
+/* Safari Cards */
 .safari-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
+  gap: 2rem;
 }
 
 .safari-card {
-  background: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding-bottom: 10px;
+  background: #e6f2e6;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .safari-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover; /* No cropping */
+  height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
-.safari-card h3 {
-  padding: 10px 15px;
-  color: #0b3d1f;
-}
-
-/* -------------------------------------------
-   DESTINATIONS
---------------------------------------------*/
+/* Destination Cards */
 .dest-cards {
   display: grid;
-  gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
 .dest-card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-/* -------------------------------------------
-   WHY CHOOSE US
---------------------------------------------*/
+/* Booking Form */
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #c4e1c4;
+  border-radius: 4px;
+  background: #f9fff9;
+}
+
+.booking-form .row.two {
+  display: flex;
+  gap: 1rem;
+}
+
+.booking-form .row.two input,
+.booking-form .row.two select {
+  flex: 1;
+}
+
+/* Why Us */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
 }
 
 .why-card {
-  background: #daf2db;
-  padding: 15px;
-  border-left: 4px solid #0b3d1f;
+  background: #d0efd0;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
   font-weight: bold;
-  border-radius: 4px;
+  color: #1b3a1b;
 }
 
-/* -------------------------------------------
-   GALLERY
---------------------------------------------*/
+/* Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
 }
 
 .gallery-item {
   width: 100%;
-  height: 180px;
-  object-fit: cover; /* No cropping */
-  border-radius: 4px;
-  cursor: pointer;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
-/* -------------------------------------------
-   ABOUT
---------------------------------------------*/
+/* About */
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
 }
 
 .about-img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-/* -------------------------------------------
-   FOOTER
---------------------------------------------*/
+/* Reviews */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review {
+  background: #e6f2e6;
+  padding: 1rem;
+  border-left: 4px solid #2f7a2f;
+  color: #1b3a1b;
+}
+
+/* Footer */
 .site-footer {
-  background: #0b3d1f;
-  padding: 20px 0;
+  background: #2f7a2f;
+  color: #fff;
+  padding: 1.5rem 2rem;
   text-align: center;
-  color: white;
-  margin-top: 40px;
 }
 
-/* -------------------------------------------
-   WHATSAPP FLOAT BTN
---------------------------------------------*/
+/* WhatsApp Floating Button */
 .wa-float {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
   background: #25d366;
-  padding: 12px 16px;
+  color: #fff;
+  padding: 0.5rem 0.7rem;
   border-radius: 50%;
-  color: white;
-  font-size: 22px;
-  text-decoration: none;
-  z-index: 9999;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* -------------------------------------------
-   RESPONSIVE
---------------------------------------------*/
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
   }
-
-  .hero {
-    height: 350px;
+  .ctas {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    display: none;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .booking-form .row.two {
+    flex-direction: column;
   }
 }
