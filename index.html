@@ -48,12 +48,12 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-slideshow">
       <img src="images/image1.jpeg" alt="Safari Image 1" class="slide active" loading="lazy">
       <img src="images/image2.jpeg" alt="Safari Image 2" class="slide" loading="lazy">
       <img src="images/masaimara1.jpeg" alt="Masai Mara" class="slide" loading="lazy">
     </div>
-
     <div class="hero-content container">
       <h1>Unforgettable Safaris in Kenya — Tailored by Local Experts</h1>
       <p class="lead">Experience the Big Five, majestic elephants, and the Great Migration — comfort, safety and local knowledge.</p>
@@ -65,24 +65,36 @@
     </div>
   </section>
 
-  <!-- MAIN -->
   <main>
-
     <!-- PACKAGES SECTION -->
     <section id="packages" class="safari-section section container">
       <h2 class="section-title">Safari Packages</h2>
       <div class="safari-grid">
-        <!-- Example card -->
         <article class="safari-card">
           <img src="images/amboseli1.jpeg" alt="Tsavo West & Amboseli" loading="lazy">
           <h3>3 Days Safari: Tsavo West & Amboseli</h3>
           <p>The definitive southern Kenya safari with Mt. Kilimanjaro views and giant tuskers.</p>
-          <div class="price-box">
-            <span class="net">Net: $1,282</span>
-            <span class="sell">Selling: $1,474</span>
-          </div>
         </article>
-        <!-- Repeat other cards similarly -->
+        <article class="safari-card">
+          <img src="images/tsavoeast.jpeg" alt="Tsavo East & Taita Hills" loading="lazy">
+          <h3>3 Days Safari: Tsavo East & Taita Hills</h3>
+          <p>Red elephants of Tsavo East + night-viewing at Salt Lick.</p>
+        </article>
+        <article class="safari-card">
+          <img src="images/ngutuni.jpeg" alt="Tsavo West & Ngutuni" loading="lazy">
+          <h3>3 Days Safari: Tsavo West & Ngutuni</h3>
+          <p>Volcanic landscapes + night game drives in Ngutuni Conservancy.</p>
+        </article>
+        <article class="safari-card">
+          <img src="images/masaimara.jpeg" alt="Maasai Mara" loading="lazy">
+          <h3>3 Days Safari: Maasai Mara</h3>
+          <p>Dedicated Big Cat safari in Kenya’s top park.</p>
+        </article>
+        <article class="safari-card">
+          <img src="images/samburu.jpeg" alt="Samburu" loading="lazy">
+          <h3>3 Days Safari: Samburu</h3>
+          <p>Search for the Samburu Special Five in a northern wilderness.</p>
+        </article>
       </div>
     </section>
 
@@ -92,8 +104,8 @@
       <div class="dest-cards">
         <div class="dest-card"><img src="images/masaimara1.jpeg" alt="Masai Mara"></div>
         <div class="dest-card"><img src="images/amboseli1.jpeg" alt="Amboseli"></div>
+        <div class="dest-card"><img src="images/nnp.jpeg" alt="Nairobi National Park"></div>
         <div class="dest-card"><img src="images/tsavo1.jpeg" alt="Tsavo"></div>
-        <div class="dest-card"><img src="images/diani1.jpeg" alt="Diani Beach"></div>
       </div>
     </section>
 
@@ -105,18 +117,13 @@
           <input name="name" type="text" placeholder="Full Name" required>
           <input name="email" type="email" placeholder="Email Address" required>
         </div>
-
         <div class="row two">
           <input name="phone" type="tel" placeholder="Phone / WhatsApp" required>
           <input name="travellers" type="number" min="1" placeholder="Number of travellers" required>
         </div>
-
         <input name="ages" type="text" placeholder="Ages (e.g., 34, 28, 6)">
-
         <div class="row two">
-          <label class="sr-only">Travel Date</label>
           <input name="travelDate" type="date" required>
-
           <select name="budget" required>
             <option value="">Preferred Budget</option>
             <option value="budget">Budget</option>
@@ -124,7 +131,6 @@
             <option value="luxury">Luxury</option>
           </select>
         </div>
-
         <select name="destination" required>
           <option value="">Preferred Destination</option>
           <option>Masai Mara</option>
@@ -144,15 +150,13 @@
             <option value="citizen">Citizen</option>
             <option value="non-citizen">Non-Citizen</option>
           </select>
-          <input type="text" name="idNumber" id="idNumber" placeholder="ID Number" style="display:none;">
-          <input type="text" name="passportNumber" id="passportNumber" placeholder="Passport Number" style="display:none;">
+          <input type="text" name="idNumber" id="idNumber" placeholder="ID Number" style="display:none;" required>
+          <input type="text" name="passportNumber" id="passportNumber" placeholder="Passport Number" style="display:none;" required>
         </div>
 
         <textarea name="notes" placeholder="Special Requests (optional)"></textarea>
-
         <div class="form-actions">
           <button type="submit" class="btn btn-primary">Submit Inquiry</button>
-          <button type="button" class="btn btn-outline" id="quick-estimate">Get Quick Estimate</button>
         </div>
       </form>
     </section>
@@ -174,10 +178,16 @@
     <section id="gallery" class="section container">
       <h2>Gallery</h2>
       <div class="gallery-grid">
-        <img src="images/image1.jpeg" alt="Gallery Image1" class="gallery-item">
-        <img src="images/image2.jpeg" alt="Gallery Image2" class="gallery-item">
-        <img src="images/image3.jpeg" alt="Gallery Image3" class="gallery-item">
-        <img src="images/image4.jpeg" alt="Gallery Image4" class="gallery-item">
+        <!-- All images 1–28 + specific ones -->
+        <img src="images/image1.jpeg" alt="Safari Image 1" class="gallery-item">
+        <img src="images/image2.jpeg" alt="Safari Image 2" class="gallery-item">
+        <img src="images/amboseli1.jpeg" alt="Amboseli" class="gallery-item">
+        <img src="images/masaimara.jpeg" alt="Masai Mara" class="gallery-item">
+        <img src="images/nnp.jpeg" alt="Nairobi NP" class="gallery-item">
+        <img src="images/tsavo1.jpeg" alt="Tsavo" class="gallery-item">
+        <img src="images/image3.jpeg" alt="Safari Image 3" class="gallery-item">
+        <img src="images/image4.jpeg" alt="Safari Image 4" class="gallery-item">
+        <!-- Add more images up to image28 -->
       </div>
     </section>
 
@@ -188,9 +198,9 @@
         <img src="images/guide.jpeg" alt="Guide" class="about-img">
         <div>
           <h3>Who We Are</h3>
-          <p>We are licensed Kenyan tour operators with years of experience guiding guests through Kenya's amazing parks.</p>
+          <p>Licensed Kenyan tour operators guiding guests through amazing parks.</p>
           <h4>Mission & Values</h4>
-          <p>Authenticity, safety, conservation and local empowerment.</p>
+          <p>Authenticity, safety, conservation, local empowerment.</p>
         </div>
       </div>
     </section>
@@ -198,10 +208,15 @@
     <!-- REVIEWS -->
     <section id="reviews" class="section container">
       <h2>Reviews & Testimonials</h2>
-      <div id="reviews-list" class="reviews-list">
-        <blockquote class="review">"Amazing service and unforgettable game drives!" — Jane D.</blockquote>
-        <blockquote class="review">"Experienced guides and comfortable lodges." — Mark K.</blockquote>
+      <div class="reviews-list">
+        <blockquote>"Amazing service and unforgettable game drives!" — Jane D.</blockquote>
+        <blockquote>"Experienced guides and comfortable lodges." — Mark K.</blockquote>
       </div>
+    </section>
+
+    <!-- TERMS -->
+    <section class="section container small">
+      <a href="terms.html">Terms & Conditions</a> | <a href="privacy.html">Privacy Policy</a>
     </section>
 
   </main>
@@ -209,13 +224,19 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <div>© <span id="year"></span> Safari Tours & Travel</div>
-      <div><a href="mailto:info@safaritours.com">info@safaritours.com</a> • +254 700 000000</div>
+      <div>© <span id="year"></span> EcoQuest Safaris</div>
+      <div><a href="mailto:info@ecoquest.com">info@ecoquest.com</a> • +254 700 000000</div>
     </div>
   </footer>
 
   <!-- WHATSAPP FLOATING BUTTON -->
-  <a id="wa-float" class="wa-float" href="https://wa.me/254700000000?text=Hi%20I'm%20interested%20in%20a%20safari" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+  <a id="wa-float" class="wa-float" href="https://wa.me/254700000000?text=Hi%20I'm%20interested%20in%20a%20safari" target="_blank">💬</a>
+
+  <!-- GALLERY MODAL -->
+  <div id="img-modal" class="img-modal">
+    <button id="modal-close" class="modal-close">✕</button>
+    <img id="modal-img" alt="">
+  </div>
 
   <script src="script.js"></script>
 </body>
