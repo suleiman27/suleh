@@ -108,6 +108,7 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
+  height: 650px; /* fixed height */
 }
 
 .hero-overlay {
@@ -118,11 +119,13 @@ body {
 
 .hero-slideshow {
   position: relative;
+  height: 100%;
 }
 
 .hero-slideshow img {
   width: 100%;
-  height: auto; /* allow natural height, no cropping */
+  height: 100%;
+  object-fit: contain; /* keep full image */
   display: none;
 }
 
@@ -186,7 +189,8 @@ body {
 
 .safari-card img {
   width: 100%;
-  height: auto; /* no cropping */
+  height: 400px; /* fixed height */
+  object-fit: contain; /* no cropping */
 }
 
 .safari-card h3 {
@@ -214,20 +218,22 @@ body {
 
 .dest-card img {
   width: 100%;
-  height: auto; /* no cropping */
+  height: 350px; /* fixed height */
+  object-fit: contain; /* no cropping */
   border-radius: 10px;
 }
 
 /* GALLERY */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: auto; /* no cropping */
+  height: 350px; /* fixed height */
+  object-fit: contain; /* no cropping */
   border-radius: 10px;
 }
 
@@ -241,7 +247,8 @@ body {
 
 .about-img {
   width: 100%;
-  height: auto; /* no cropping */
+  height: 450px; /* fixed height */
+  object-fit: contain; /* no cropping */
   border-radius: 10px;
 }
 
