@@ -9,235 +9,195 @@
 </head>
 <body>
 
-  <!-- HEADER / NAV -->
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main navigation">
-      <div class="brand">EcoQuest <span class="accent">Safaris</span></div>
+<!-- HEADER -->
+<header class="site-header">
+  <nav class="nav container">
+    <div class="brand">EcoQuest <span class="accent">Safaris</span></div>
 
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">☰</button>
+    <button id="nav-toggle" class="nav-toggle">☰</button>
 
-      <ul id="nav-links" class="nav-links">
-        <li><a href="#home">Home</a></li>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="#home">Home</a></li>
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Packages <span class="arrow">▾</span></a>
-          <ul class="dropdown-menu" role="menu" aria-label="Packages">
-            <li role="none"><a role="menuitem" href="#">3 Days Tsavo West & Amboseli</a></li>
-            <li role="none"><a role="menuitem" href="#">3 Days Tsavo East & Taita Hills</a></li>
-            <li role="none"><a role="menuitem" href="#">3 Days Tsavo West & Ngutuni</a></li>
-            <li role="none"><a role="menuitem" href="#">3 Days Taita Hills & Amboseli</a></li>
-            <li role="none"><a role="menuitem" href="#">3 Days Amboseli & Nairobi NP</a></li>
-            <li role="none"><a role="menuitem" href="#">3 Days Nakuru + Naivasha</a></li>
-            <li role="none"><a role="menuitem" href="#">3 Days Maasai Mara</a></li>
-            <li role="none"><a role="menuitem" href="#">3 Days Samburu</a></li>
-          </ul>
-        </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-btn">Packages ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">3 Days Tsavo West & Amboseli</a></li>
+          <li><a href="#">3 Days Tsavo East & Taita Hills</a></li>
+          <li><a href="#">3 Days Tsavo West & Ngutuni</a></li>
+          <li><a href="#">3 Days Taita Hills & Amboseli</a></li>
+          <li><a href="#">3 Days Amboseli & Nairobi NP</a></li>
+          <li><a href="#">3 Days Nakuru + Naivasha</a></li>
+          <li><a href="#">3 Days Maasai Mara</a></li>
+          <li><a href="#">3 Days Samburu</a></li>
+        </ul>
+      </li>
 
-        <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-      <div class="nav-actions">
-        <button class="btn btn-outline" id="lang-toggle">EN</button>
-        <a class="btn btn-primary" href="#booking">Book Your Safari</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-slideshow">
-      <img src="images/image1.jpeg" alt="Safari Image 1" class="slide active" loading="lazy">
-      <img src="images/image2.jpeg" alt="Safari Image 2" class="slide" loading="lazy">
-      <img src="images/masaimara1.jpeg" alt="Masai Mara" class="slide" loading="lazy">
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="#booking">Book Safari</a>
     </div>
-    <div class="hero-content container">
-      <h1>Unforgettable Safaris in Kenya — Tailored by Local Experts</h1>
-      <p class="lead">Experience the Big Five, majestic elephants, and the Great Migration — comfort, safety and local knowledge.</p>
-      <div class="ctas">
-        <a class="btn btn-primary" href="#booking">Book Your Safari</a>
-        <button class="btn btn-secondary" id="quote-btn">Get a Free Quote</button>
-      </div>
-      <p class="small-intro">We are a licensed Kenyan tour operator with experienced guides and 24/7 support.</p>
-    </div>
-  </section>
+  </nav>
+</header>
 
-  <main>
-    <!-- PACKAGES SECTION -->
-    <section id="packages" class="safari-section section container">
-      <h2 class="section-title">Safari Packages</h2>
-      <div class="safari-grid">
-        <article class="safari-card">
-          <img src="images/amboseli1.jpeg" alt="Tsavo West & Amboseli" loading="lazy">
-          <h3>3 Days Safari: Tsavo West & Amboseli</h3>
-          <p>The definitive southern Kenya safari with Mt. Kilimanjaro views and giant tuskers.</p>
-        </article>
-        <article class="safari-card">
-          <img src="images/tsavoeast.jpeg" alt="Tsavo East & Taita Hills" loading="lazy">
-          <h3>3 Days Safari: Tsavo East & Taita Hills</h3>
-          <p>Red elephants of Tsavo East + night-viewing at Salt Lick.</p>
-        </article>
-        <article class="safari-card">
-          <img src="images/ngutuni.jpeg" alt="Tsavo West & Ngutuni" loading="lazy">
-          <h3>3 Days Safari: Tsavo West & Ngutuni</h3>
-          <p>Volcanic landscapes + night game drives in Ngutuni Conservancy.</p>
-        </article>
-        <article class="safari-card">
-          <img src="images/masaimara.jpeg" alt="Maasai Mara" loading="lazy">
-          <h3>3 Days Safari: Maasai Mara</h3>
-          <p>Dedicated Big Cat safari in Kenya’s top park.</p>
-        </article>
-        <article class="safari-card">
-          <img src="images/samburu.jpeg" alt="Samburu" loading="lazy">
-          <h3>3 Days Safari: Samburu</h3>
-          <p>Search for the Samburu Special Five in a northern wilderness.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- DESTINATIONS -->
-    <section id="destinations" class="section container">
-      <h2>Popular Destinations</h2>
-      <div class="dest-cards">
-        <div class="dest-card"><img src="images/masaimara1.jpeg" alt="Masai Mara"></div>
-        <div class="dest-card"><img src="images/amboseli1.jpeg" alt="Amboseli"></div>
-        <div class="dest-card"><img src="images/nnp.jpeg" alt="Nairobi National Park"></div>
-        <div class="dest-card"><img src="images/tsavo1.jpeg" alt="Tsavo"></div>
-      </div>
-    </section>
-
-    <!-- BOOKING FORM -->
-    <section id="booking" class="section container">
-      <h2>Book Your Safari / Inquiry</h2>
-      <form id="booking-form" class="booking-form" novalidate>
-        <div class="row two">
-          <input name="name" type="text" placeholder="Full Name" required>
-          <input name="email" type="email" placeholder="Email Address" required>
-        </div>
-        <div class="row two">
-          <input name="phone" type="tel" placeholder="Phone / WhatsApp" required>
-          <input name="travellers" type="number" min="1" placeholder="Number of travellers" required>
-        </div>
-        <input name="ages" type="text" placeholder="Ages (e.g., 34, 28, 6)">
-        <div class="row two">
-          <input name="travelDate" type="date" required>
-          <select name="budget" required>
-            <option value="">Preferred Budget</option>
-            <option value="budget">Budget</option>
-            <option value="mid">Mid-range</option>
-            <option value="luxury">Luxury</option>
-          </select>
-        </div>
-        <select name="destination" required>
-          <option value="">Preferred Destination</option>
-          <option>Masai Mara</option>
-          <option>Amboseli</option>
-          <option>Tsavo East</option>
-          <option>Tsavo West</option>
-          <option>Lake Nakuru</option>
-          <option>Samburu</option>
-          <option>Diani + Safari</option>
-          <option>Nairobi National Park</option>
-        </select>
-
-        <!-- Citizenship -->
-        <div class="row two">
-          <select name="citizenship" id="citizenship" required>
-            <option value="">Select Citizenship</option>
-            <option value="citizen">Citizen</option>
-            <option value="non-citizen">Non-Citizen</option>
-          </select>
-          <input type="text" name="idNumber" id="idNumber" placeholder="ID Number" style="display:none;" required>
-          <input type="text" name="passportNumber" id="passportNumber" placeholder="Passport Number" style="display:none;" required>
-        </div>
-
-        <textarea name="notes" placeholder="Special Requests (optional)"></textarea>
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Submit Inquiry</button>
-        </div>
-      </form>
-    </section>
-
-    <!-- WHY CHOOSE US -->
-    <section id="why-us" class="section container">
-      <h2>Why Choose Us</h2>
-      <div class="why-grid">
-        <div class="why-card">Licensed Tour Operator / KWS Certified</div>
-        <div class="why-card">Experienced Guides</div>
-        <div class="why-card">Local Knowledge</div>
-        <div class="why-card">Custom Itineraries</div>
-        <div class="why-card">Fast Responses (24/7)</div>
-        <div class="why-card">Transparent Pricing</div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="section container">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <!-- All images 1–28 + specific ones -->
-        <img src="images/image1.jpeg" alt="Safari Image 1" class="gallery-item">
-        <img src="images/image2.jpeg" alt="Safari Image 2" class="gallery-item">
-        <img src="images/amboseli1.jpeg" alt="Amboseli" class="gallery-item">
-        <img src="images/masaimara.jpeg" alt="Masai Mara" class="gallery-item">
-        <img src="images/nnp.jpeg" alt="Nairobi NP" class="gallery-item">
-        <img src="images/tsavo1.jpeg" alt="Tsavo" class="gallery-item">
-        <img src="images/image3.jpeg" alt="Safari Image 3" class="gallery-item">
-        <img src="images/image4.jpeg" alt="Safari Image 4" class="gallery-item">
-        <!-- Add more images up to image28 -->
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section container">
-      <h2>About Us</h2>
-      <div class="about-grid">
-        <img src="images/guide.jpeg" alt="Guide" class="about-img">
-        <div>
-          <h3>Who We Are</h3>
-          <p>Licensed Kenyan tour operators guiding guests through amazing parks.</p>
-          <h4>Mission & Values</h4>
-          <p>Authenticity, safety, conservation, local empowerment.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="reviews" class="section container">
-      <h2>Reviews & Testimonials</h2>
-      <div class="reviews-list">
-        <blockquote>"Amazing service and unforgettable game drives!" — Jane D.</blockquote>
-        <blockquote>"Experienced guides and comfortable lodges." — Mark K.</blockquote>
-      </div>
-    </section>
-
-    <!-- TERMS -->
-    <section class="section container small">
-      <a href="terms.html">Terms & Conditions</a> | <a href="privacy.html">Privacy Policy</a>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div>© <span id="year"></span> EcoQuest Safaris</div>
-      <div><a href="mailto:info@ecoquest.com">info@ecoquest.com</a> • +254 700 000000</div>
-    </div>
-  </footer>
-
-  <!-- WHATSAPP FLOATING BUTTON -->
-  <a id="wa-float" class="wa-float" href="https://wa.me/254700000000?text=Hi%20I'm%20interested%20in%20a%20safari" target="_blank">💬</a>
-
-  <!-- GALLERY MODAL -->
-  <div id="img-modal" class="img-modal">
-    <button id="modal-close" class="modal-close">✕</button>
-    <img id="modal-img" alt="">
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-slideshow">
+    <img src="images/image1.jpeg" class="slide active">
+    <img src="images/image2.jpeg" class="slide">
+    <img src="images/image3.jpeg" class="slide">
   </div>
 
-  <script src="script.js"></script>
+  <div class="hero-content container">
+    <h1>Unforgettable Safaris in Kenya</h1>
+    <p>Experience the Big Five, Masai Mara Big Cats, and breathtaking landscapes.</p>
+    <a href="#booking" class="btn btn-primary">Book Now</a>
+  </div>
+</section>
+
+<main>
+
+<!-- SAFARI PACKAGES -->
+<section id="packages" class="section container">
+  <h2>Safari Packages</h2>
+  <div class="safari-grid">
+
+    <div class="safari-card">
+      <img src="images/amboseli1.jpeg" alt="">
+      <h3>3 Days Tsavo West & Amboseli</h3>
+      <p>Mt. Kilimanjaro views + giant tuskers.</p>
+    </div>
+
+    <div class="safari-card">
+      <img src="images/tsavoeast.jpeg" alt="">
+      <h3>3 Days Tsavo East & Taita Hills</h3>
+      <p>Red elephants + Salt Lick Lodge.</p>
+    </div>
+
+    <div class="safari-card">
+      <img src="images/ngutuni.jpeg" alt="">
+      <h3>3 Days Tsavo West & Ngutuni</h3>
+      <p>Volcanic landscapes + night drives.</p>
+    </div>
+
+    <div class="safari-card">
+      <img src="images/masaimara.jpeg" alt="">
+      <h3>3 Days Maasai Mara</h3>
+      <p>Big Cats + Wildebeest Migration.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section id="destinations" class="section container">
+  <h2>Popular Destinations</h2>
+  <div class="dest-grid">
+    <img src="images/masaimara1.jpeg">
+    <img src="images/amboseli1.jpeg">
+    <img src="images/nnp.jpeg">
+    <img src="images/tsavo1.jpeg">
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section id="booking" class="section container">
+  <h2>Book Your Safari / Inquiry</h2>
+  <form id="booking-form" class="booking-form">
+
+    <div class="row two">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+    </div>
+
+    <div class="row two">
+      <input type="tel" placeholder="Phone / WhatsApp" required>
+      <input type="number" placeholder="Number of Travellers" required>
+    </div>
+
+    <div class="row two">
+      <input type="date" required>
+      <select required>
+        <option value="">Budget Level</option>
+        <option>Budget</option>
+        <option>Mid-range</option>
+        <option>Luxury</option>
+      </select>
+    </div>
+
+    <!-- Citizen / Non-Citizen -->
+    <div class="row two">
+      <select id="citizenship" required>
+        <option value="">Select Citizenship</option>
+        <option value="citizen">Citizen</option>
+        <option value="non-citizen">Non-Citizen</option>
+      </select>
+
+      <input id="idNumber" type="text" placeholder="ID Number" style="display:none;">
+      <input id="passportNumber" type="text" placeholder="Passport Number" style="display:none;">
+    </div>
+
+    <textarea placeholder="Special Requests (Optional)"></textarea>
+
+    <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+  </form>
+</section>
+
+<!-- WHY US -->
+<section id="why-us" class="section container">
+  <h2>Why Choose Us</h2>
+  <div class="why-grid">
+    <div class="why-card">KWS Licensed Operator</div>
+    <div class="why-card">Professional Guides</div>
+    <div class="why-card">Secure Vehicles</div>
+    <div class="why-card">Fast 24/7 Support</div>
+    <div class="why-card">Affordable Rates</div>
+    <div class="why-card">Top Reviews</div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section container">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="images/image1.jpeg" class="gallery-item">
+    <img src="images/image2.jpeg" class="gallery-item">
+    <img src="images/image3.jpeg" class="gallery-item">
+    <img src="images/image4.jpeg" class="gallery-item">
+    <img src="images/image5.jpeg" class="gallery-item">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section container">
+  <h2>About Us</h2>
+  <div class="about-grid">
+    <img src="images/guide.jpeg" class="about-img">
+    <div>
+      <p>We are a Kenyan tour operator offering unforgettable wildlife experiences.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <p>© 2025 EcoQuest Safaris</p>
+    <p>Email: info@ecoquest.com</p>
+    <p>Phone: +254 700 000000</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/254700000000" class="wa-float">💬</a>
+
+<script src="script.js"></script>
 </body>
 </html>
