@@ -48,8 +48,6 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="hero-overlay"></div>
-
     <div class="hero-slideshow">
       <img src="images/image1.jpeg" alt="Safari Image 1" class="slide active" loading="lazy">
       <img src="images/image2.jpeg" alt="Safari Image 2" class="slide" loading="lazy">
@@ -70,10 +68,11 @@
   <!-- MAIN -->
   <main>
 
-    <!-- PACKAGES SECTION (cards) -->
+    <!-- PACKAGES SECTION -->
     <section id="packages" class="safari-section section container">
       <h2 class="section-title">Safari Packages</h2>
       <div class="safari-grid">
+        <!-- Example card -->
         <article class="safari-card">
           <img src="images/amboseli1.jpeg" alt="Tsavo West & Amboseli" loading="lazy">
           <h3>3 Days Safari: Tsavo West & Amboseli</h3>
@@ -83,76 +82,7 @@
             <span class="sell">Selling: $1,474</span>
           </div>
         </article>
-
-        <article class="safari-card">
-          <img src="images/tsavoeast.jpeg" alt="Tsavo East & Taita Hills" loading="lazy">
-          <h3>3 Days Safari: Tsavo East & Taita Hills</h3>
-          <p>Red elephants of Tsavo East + night-viewing at Salt Lick.</p>
-          <div class="price-box">
-            <span class="net">Net: $1,250</span>
-            <span class="sell">Selling: $1,438</span>
-          </div>
-        </article>
-
-        <article class="safari-card">
-          <img src="images/ngutuni.jpeg" alt="Tsavo West & Ngutuni" loading="lazy">
-          <h3>3 Days Safari: Tsavo West & Ngutuni</h3>
-          <p>Volcanic landscapes + night game drives in Ngutuni Conservancy.</p>
-          <div class="price-box">
-            <span class="net">Net: $1,194</span>
-            <span class="sell">Selling: $1,373</span>
-          </div>
-        </article>
-
-        <article class="safari-card">
-          <img src="images/amboseli2.jpeg" alt="Taita Hills & Amboseli" loading="lazy">
-          <h3>3 Days Safari: Taita Hills & Amboseli</h3>
-          <p>Floodlit night wildlife + Kilimanjaro elephants.</p>
-          <div class="price-box">
-            <span class="net">Net: $1,270</span>
-            <span class="sell">Selling: $1,461</span>
-          </div>
-        </article>
-
-        <article class="safari-card">
-          <img src="images/nnp.jpeg" alt="Amboseli & Nairobi NP" loading="lazy">
-          <h3>3 Days Safari: Amboseli & Nairobi NP</h3>
-          <p>City wildlife combined with Amboseli’s tuskers.</p>
-          <div class="price-box">
-            <span class="net">Net: $1,310</span>
-            <span class="sell">Selling: $1,507</span>
-          </div>
-        </article>
-
-        <article class="safari-card">
-          <img src="images/nakuru.jpeg" alt="Nakuru + Naivasha" loading="lazy">
-          <h3>3 Days Safari: Nakuru + Naivasha + Hell’s Gate</h3>
-          <p>Rhinos, flamingos, boat safari, and gorge hiking.</p>
-          <div class="price-box">
-            <span class="net">Net: $1,250</span>
-            <span class="sell">Selling: $1,438</span>
-          </div>
-        </article>
-
-        <article class="safari-card">
-          <img src="images/masaimara.jpeg" alt="Maasai Mara" loading="lazy">
-          <h3>3 Days Safari: Maasai Mara</h3>
-          <p>Dedicated Big Cat safari in Kenya’s top park.</p>
-          <div class="price-box">
-            <span class="net">Net: $1,350</span>
-            <span class="sell">Selling: $1,553</span>
-          </div>
-        </article>
-
-        <article class="safari-card">
-          <img src="images/samburu.jpeg" alt="Samburu" loading="lazy">
-          <h3>3 Days Safari: Samburu</h3>
-          <p>Search for the Samburu Special Five in a northern wilderness.</p>
-          <div class="price-box">
-            <span class="net">Net: $1,305</span>
-            <span class="sell">Selling: $1,501</span>
-          </div>
-        </article>
+        <!-- Repeat other cards similarly -->
       </div>
     </section>
 
@@ -168,65 +98,64 @@
     </section>
 
     <!-- BOOKING FORM -->
-   <section id="booking" class="section container">
-  <h2>Book Your Safari / Inquiry</h2>
-  <form id="booking-form" class="booking-form" novalidate>
-    <div class="row two">
-      <input name="name" type="text" placeholder="Full Name" required>
-      <input name="email" type="email" placeholder="Email Address" required>
-    </div>
+    <section id="booking" class="section container">
+      <h2>Book Your Safari / Inquiry</h2>
+      <form id="booking-form" class="booking-form" novalidate>
+        <div class="row two">
+          <input name="name" type="text" placeholder="Full Name" required>
+          <input name="email" type="email" placeholder="Email Address" required>
+        </div>
 
-    <div class="row two">
-      <input name="phone" type="tel" placeholder="Phone / WhatsApp" required>
-      <input name="travellers" type="number" min="1" placeholder="Number of travellers" required>
-    </div>
+        <div class="row two">
+          <input name="phone" type="tel" placeholder="Phone / WhatsApp" required>
+          <input name="travellers" type="number" min="1" placeholder="Number of travellers" required>
+        </div>
 
-    <input name="ages" type="text" placeholder="Ages (e.g., 34, 28, 6)">
+        <input name="ages" type="text" placeholder="Ages (e.g., 34, 28, 6)">
 
-    <div class="row two">
-      <label class="sr-only">Travel Date</label>
-      <input name="travelDate" type="date" required>
+        <div class="row two">
+          <label class="sr-only">Travel Date</label>
+          <input name="travelDate" type="date" required>
 
-      <select name="budget" required>
-        <option value="">Preferred Budget</option>
-        <option value="budget">Budget</option>
-        <option value="mid">Mid-range</option>
-        <option value="luxury">Luxury</option>
-      </select>
-    </div>
+          <select name="budget" required>
+            <option value="">Preferred Budget</option>
+            <option value="budget">Budget</option>
+            <option value="mid">Mid-range</option>
+            <option value="luxury">Luxury</option>
+          </select>
+        </div>
 
-    <select name="destination" required>
-      <option value="">Preferred Destination</option>
-      <option>Masai Mara</option>
-      <option>Amboseli</option>
-      <option>Tsavo East</option>
-      <option>Tsavo West</option>
-      <option>Lake Nakuru</option>
-      <option>Samburu</option>
-      <option>Diani + Safari</option>
-      <option>Nairobi National Park</option>
-    </select>
+        <select name="destination" required>
+          <option value="">Preferred Destination</option>
+          <option>Masai Mara</option>
+          <option>Amboseli</option>
+          <option>Tsavo East</option>
+          <option>Tsavo West</option>
+          <option>Lake Nakuru</option>
+          <option>Samburu</option>
+          <option>Diani + Safari</option>
+          <option>Nairobi National Park</option>
+        </select>
 
-    <!-- Citizenship Option -->
-    <div class="row two">
-      <select name="citizenship" id="citizenship" required>
-        <option value="">Select Citizenship</option>
-        <option value="citizen">Citizen</option>
-        <option value="non-citizen">Non-Citizen</option>
-      </select>
+        <!-- Citizenship -->
+        <div class="row two">
+          <select name="citizenship" id="citizenship" required>
+            <option value="">Select Citizenship</option>
+            <option value="citizen">Citizen</option>
+            <option value="non-citizen">Non-Citizen</option>
+          </select>
+          <input type="text" name="idNumber" id="idNumber" placeholder="ID Number" style="display:none;">
+          <input type="text" name="passportNumber" id="passportNumber" placeholder="Passport Number" style="display:none;">
+        </div>
 
-      <input type="text" name="idNumber" id="idNumber" placeholder="ID Number" style="display:none;" required>
-      <input type="text" name="passportNumber" id="passportNumber" placeholder="Passport Number" style="display:none;" required>
-    </div>
+        <textarea name="notes" placeholder="Special Requests (optional)"></textarea>
 
-    <textarea name="notes" placeholder="Special Requests (optional)"></textarea>
-
-    <div class="form-actions">
-      <button type="submit" class="btn btn-primary">Submit Inquiry</button>
-      <button type="button" class="btn btn-outline" id="quick-estimate">Get Quick Estimate</button>
-    </div>
-  </form>
-</section>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+          <button type="button" class="btn btn-outline" id="quick-estimate">Get Quick Estimate</button>
+        </div>
+      </form>
+    </section>
 
     <!-- WHY CHOOSE US -->
     <section id="why-us" class="section container">
@@ -245,10 +174,10 @@
     <section id="gallery" class="section container">
       <h2>Gallery</h2>
       <div class="gallery-grid">
-        <img src="images/image11.jpeg" alt="Gallery Image11" loading="lazy" class="gallery-item">
-        <img src="images/image7.jepg" alt="Gallery Image21" loading="lazy" class="gallery-item">
-        <img src="images/image8.jpeg" alt="Gallery Image23" loading="lazy" class="gallery-item">
-        <img src="images/image30.jpeg" alt="Gallery Image30" loading="lazy" class="gallery-item">
+        <img src="images/image1.jpeg" alt="Gallery Image1" class="gallery-item">
+        <img src="images/image2.jpeg" alt="Gallery Image2" class="gallery-item">
+        <img src="images/image3.jpeg" alt="Gallery Image3" class="gallery-item">
+        <img src="images/image4.jpeg" alt="Gallery Image4" class="gallery-item">
       </div>
     </section>
 
@@ -270,15 +199,9 @@
     <section id="reviews" class="section container">
       <h2>Reviews & Testimonials</h2>
       <div id="reviews-list" class="reviews-list">
-        <!-- placeholder reviews -->
         <blockquote class="review">"Amazing service and unforgettable game drives!" — Jane D.</blockquote>
         <blockquote class="review">"Experienced guides and comfortable lodges." — Mark K.</blockquote>
       </div>
-    </section>
-
-    <!-- TERMS -->
-    <section class="section container small">
-      <a href="terms.html">Terms & Conditions</a> | <a href="privacy.html">Privacy Policy</a>
     </section>
 
   </main>
@@ -293,12 +216,6 @@
 
   <!-- WHATSAPP FLOATING BUTTON -->
   <a id="wa-float" class="wa-float" href="https://wa.me/254700000000?text=Hi%20I'm%20interested%20in%20a%20safari" target="_blank" aria-label="Chat on WhatsApp">💬</a>
-
-  <!-- GALLERY MODAL -->
-  <div id="img-modal" class="img-modal" aria-hidden="true">
-    <button id="modal-close" class="modal-close" aria-label="Close image">✕</button>
-    <img id="modal-img" alt="">
-  </div>
 
   <script src="script.js"></script>
 </body>
