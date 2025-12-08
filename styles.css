@@ -123,7 +123,7 @@ body {
 
 .hero-slideshow img {
   width: 100%;
-  height: auto; /* height auto to prevent extra space */
+  height: 100%; /* height auto to prevent extra space */
   object-fit: contain; 
   display: none;
 }
