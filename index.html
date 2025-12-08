@@ -168,46 +168,65 @@
     </section>
 
     <!-- BOOKING FORM -->
-    <section id="booking" class="section container">
-      <h2>Book Your Safari / Inquiry</h2>
-      <form id="booking-form" class="booking-form" novalidate>
-        <div class="row two">
-          <input name="name" type="text" placeholder="Full Name" required>
-          <input name="email" type="email" placeholder="Email Address" required>
-        </div>
-        <div class="row two">
-          <input name="phone" type="tel" placeholder="Phone / WhatsApp" required>
-          <input name="travellers" type="number" min="1" placeholder="Number of travellers" required>
-        </div>
-        <input name="ages" type="text" placeholder="Ages (e.g., 34, 28, 6)">
-        <div class="row two">
-          <label class="sr-only">Travel Date</label>
-          <input name="travelDate" type="date" required>
-          <select name="budget" required>
-            <option value="">Preferred Budget</option>
-            <option value="budget">Budget</option>
-            <option value="mid">Mid-range</option>
-            <option value="luxury">Luxury</option>
-          </select>
-        </div>
-        <select name="destination" required>
-          <option value="">Preferred Destination</option>
-          <option>Masai Mara</option>
-          <option>Amboseli</option>
-          <option>Tsavo East</option>
-          <option>Tsavo West</option>
-          <option>Lake Nakuru</option>
-          <option>Samburu</option>
-          <option>Diani + Safari</option>
-          <option>Nairobi National Park</option>
-        </select>
-        <textarea name="notes" placeholder="Special Requests (optional)"></textarea>
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Submit Inquiry</button>
-          <button type="button" class="btn btn-outline" id="quick-estimate">Get Quick Estimate</button>
-        </div>
-      </form>
-    </section>
+   <section id="booking" class="section container">
+  <h2>Book Your Safari / Inquiry</h2>
+  <form id="booking-form" class="booking-form" novalidate>
+    <div class="row two">
+      <input name="name" type="text" placeholder="Full Name" required>
+      <input name="email" type="email" placeholder="Email Address" required>
+    </div>
+
+    <div class="row two">
+      <input name="phone" type="tel" placeholder="Phone / WhatsApp" required>
+      <input name="travellers" type="number" min="1" placeholder="Number of travellers" required>
+    </div>
+
+    <input name="ages" type="text" placeholder="Ages (e.g., 34, 28, 6)">
+
+    <div class="row two">
+      <label class="sr-only">Travel Date</label>
+      <input name="travelDate" type="date" required>
+
+      <select name="budget" required>
+        <option value="">Preferred Budget</option>
+        <option value="budget">Budget</option>
+        <option value="mid">Mid-range</option>
+        <option value="luxury">Luxury</option>
+      </select>
+    </div>
+
+    <select name="destination" required>
+      <option value="">Preferred Destination</option>
+      <option>Masai Mara</option>
+      <option>Amboseli</option>
+      <option>Tsavo East</option>
+      <option>Tsavo West</option>
+      <option>Lake Nakuru</option>
+      <option>Samburu</option>
+      <option>Diani + Safari</option>
+      <option>Nairobi National Park</option>
+    </select>
+
+    <!-- Citizenship Option -->
+    <div class="row two">
+      <select name="citizenship" id="citizenship" required>
+        <option value="">Select Citizenship</option>
+        <option value="citizen">Citizen</option>
+        <option value="non-citizen">Non-Citizen</option>
+      </select>
+
+      <input type="text" name="idNumber" id="idNumber" placeholder="ID Number" style="display:none;" required>
+      <input type="text" name="passportNumber" id="passportNumber" placeholder="Passport Number" style="display:none;" required>
+    </div>
+
+    <textarea name="notes" placeholder="Special Requests (optional)"></textarea>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+      <button type="button" class="btn btn-outline" id="quick-estimate">Get Quick Estimate</button>
+    </div>
+  </form>
+</section>
 
     <!-- WHY CHOOSE US -->
     <section id="why-us" class="section container">
