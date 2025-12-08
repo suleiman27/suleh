@@ -108,7 +108,8 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
-  max-height: 500px; /* limit hero section height */
+  max-height: 400px; /* reduced height to prevent hanging */
+  padding: 0;        /* remove extra space */
 }
 
 .hero-slideshow {
@@ -119,7 +120,7 @@ body {
 .hero-slideshow img {
   width: 100%;
   height: 100%;
-  max-height: 500px; /* keeps image from hanging */
+  max-height: 400px;
   object-fit: contain; /* no cropping */
   display: none;
 }
@@ -147,12 +148,12 @@ body {
 
 /* MAIN / SECTIONS */
 .section {
-  padding: 2rem;
+  padding: 1.5rem 2rem; /* reduced padding */
 }
 
 .section-title {
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -160,7 +161,7 @@ body {
 .safari-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .safari-card {
@@ -172,22 +173,22 @@ body {
 }
 
 .safari-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 .safari-card img {
   width: 100%;
-  height: auto; /* natural height */
+  height: auto;
   object-fit: contain;
 }
 
 .safari-card h3 {
-  margin: 1rem;
+  margin: 0.8rem 1rem;
   font-size: 1.2rem;
 }
 
 .safari-card p {
-  margin: 0 1rem 1rem;
+  margin: 0 1rem 0.8rem;
   font-size: 0.95rem;
 }
 
@@ -202,8 +203,8 @@ body {
 /* DESTINATIONS */
 .dest-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
 }
 
 .dest-card img {
@@ -216,8 +217,8 @@ body {
 /* GALLERY */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
 }
 
 .gallery-grid img {
@@ -231,7 +232,7 @@ body {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -245,15 +246,15 @@ body {
 /* WHY CHOOSE US */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
   text-align: center;
 }
 
 .why-card {
   background: #27ae60;
   color: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
   font-weight: bold;
 }
@@ -337,7 +338,7 @@ body {
 .site-footer {
   background: #333;
   color: #fff;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   text-align: center;
 }
 
