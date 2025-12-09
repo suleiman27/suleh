@@ -370,6 +370,7 @@ blockquote {
 /* ========================
    FOOTER
 ======================== */
+/* FOOTER */
 .bottom-bar {
   background-color: #1a7031; /* green background */
   color: #e6f5ea;
@@ -379,19 +380,20 @@ blockquote {
 
 .bottom-container {
   display: flex;
-  flex-direction: column; /* vertical stacking */
-  gap: 2rem; /* space between sections */
+  flex-direction: column; /* stack sections vertically */
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .footer-section {
   display: flex;
-  flex-direction: column; /* stack title above content */
+  flex-direction: column; /* stack title above contents */
+  gap: 0.5rem; /* space between title and items */
 }
 
 .footer-section h4 {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   font-size: 1.2rem;
   color: #fff;
 }
@@ -400,7 +402,7 @@ blockquote {
 .footer-section a,
 .footer-section li {
   color: #e6f5ea;
-  margin-bottom: 0.5rem;
+  margin: 0.3rem 0; /* vertical spacing only */
   line-height: 1.4;
 }
 
@@ -411,6 +413,10 @@ blockquote {
 .footer-section ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* keep items vertical */
+  gap: 0.3rem;
 }
 
 .payment-icons {
@@ -433,13 +439,12 @@ blockquote {
   color: #d3f0d3;
 }
 
-/* Responsive for smaller screens */
+/* Responsive */
 @media (max-width: 768px) {
   .bottom-container {
     flex-direction: column;
     gap: 1.5rem;
   }
-
 }
 
 .site-footer {
