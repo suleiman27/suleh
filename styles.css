@@ -421,9 +421,9 @@ blockquote {
 .payment-icons img {
   width: 50px;
   height: auto;
-}
 
-.bottom-bar-credit {
+
+.bottom-bar-credit 
   text-align: center;
   margin-top: 1.5rem;
   font-size: 0.85rem;
