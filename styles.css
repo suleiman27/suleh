@@ -456,15 +456,15 @@ blockquote {
 /* WhatsApp Floating Button */
 .wa-float {
   position: fixed;
-  width: 55px;       /* slightly smaller */
-  height: 55px;
-  bottom: 25px;      /* closer to edge but not too much */
-  right: 25px;
+  width: 70px;       /* slightly smaller */
+  height: 70px;
+  bottom: 45px;      /* closer to edge but not too much */
+  right: 45px;
   background-color: #25d366;
   color: #FFF;
-  border-radius: 50%;
+  border-radius: 70%;
   text-align: center;
-  font-size: 28px;
+  font-size: 38px;
   box-shadow: 2px 2px 5px #999;
   z-index: 1000;
   transition: transform 0.2s;
