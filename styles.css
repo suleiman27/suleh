@@ -370,6 +370,76 @@ blockquote {
 /* ========================
    FOOTER
 ======================== */
+.bottom-bar {
+  background-color: #1a7031; /* dark green */
+  color: #e6f5ea;
+  padding: 2rem 1rem 1rem 1rem;
+  font-size: 0.9rem;
+}
+
+.bottom-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+}
+
+.footer-section h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section li {
+  color: #e6f5ea;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+  color: #b5f0a0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.payment-icons img {
+  width: 50px;
+  height: auto;
+}
+
+.bottom-bar-credit {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  color: #d3f0d3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bottom-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .site-footer {
   background-color: #2b6f4b;
   color: #fff;
