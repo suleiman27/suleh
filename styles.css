@@ -1,47 +1,64 @@
-/* ===== Reset / Base ===== */
+/* ========================
+   RESET & BASE
+======================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-  background-color: #eaf4ea;
-  color: #1f3d1f;
+  background-color: #f0f7f2; /* light greenish */
+  color: #1a1a1a;
   line-height: 1.6;
 }
 
-/* ===== HEADER / NAV ===== */
-.site-header {
-  width: 100%;
-  background-color: #3a6b3a;
-  color: #fff;
-  position: fixed;
-  top: 0;
-  z-index: 999;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.nav.container {
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========================
+   HEADER / NAVIGATION
+======================== */
+.site-header {
+  background-color: #2b6f4b; /* dark green */
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .brand {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .brand .accent {
-  color: #a1dba1;
+  color: #a4de02; /* light green accent */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-links li {
@@ -49,96 +66,110 @@ body {
 }
 
 .nav-links a, .dropdown-btn {
-  text-decoration: none;
   color: #fff;
-  padding: 0.5rem 1rem;
-  display: block;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.3s;
 }
 
-.nav-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: #fff;
+.nav-links a:hover, .dropdown-btn:hover {
+  background-color: #1f5a3d;
+  border-radius: 5px;
 }
 
-/* ===== DROPDOWN ===== */
+/* Dropdown */
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #2d562d;
-  min-width: 180px;
-  border-radius: 4px;
-  overflow: hidden;
-  z-index: 10;
+  background-color: #2b6f4b;
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  min-width: 150px;
+  z-index: 1000;
 }
 
 .dropdown-menu li button {
   background: none;
   border: none;
+  color: #fff;
   width: 100%;
   text-align: left;
-  color: #fff;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
 .dropdown-menu li button:hover {
-  background-color: #1f3d1f;
-  color: #a1dba1;
+  background-color: #1f5a3d;
 }
 
-/* ===== NAV ACTIONS ===== */
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .nav-actions {
   display: flex;
-  gap: 0.5rem;
-  align-items: center;
+  gap: 1rem;
 }
 
 .btn {
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .btn-primary {
-  background-color: #6fae6f;
-  color: #fff;
+  background-color: #a4de02;
   border: none;
+  color: #1a1a1a;
+  transition: 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #558055;
+  background-color: #8acb00;
 }
 
 .btn-outline {
   background: none;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   color: #fff;
 }
 
 .btn-outline:hover {
-  background-color: #fff;
-  color: #3a6b3a;
+  background-color: #1f5a3d;
+  border-color: #1f5a3d;
 }
 
-/* ===== HERO ===== */
+/* ========================
+   HERO
+======================== */
 .hero {
-  margin-top: 70px;
-  position: relative;
   height: 80vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px; /* header offset */
   overflow: hidden;
 }
 
-.hero-slideshow img {
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 80vh;
+  height: 100%;
+}
+
+.hero-slideshow .slide {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -147,238 +178,242 @@ body {
   transition: opacity 1s ease-in-out;
 }
 
-.hero-slideshow img.active {
+.hero-slideshow .slide.active {
   opacity: 1;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  top:0;
+  left:0;
   width: 100%;
   height: 100%;
-  background: rgba(58, 107, 58, 0.4);
+  background-color: rgba(43, 111, 75, 0.5); /* dark overlay green */
 }
 
 .hero-content {
   position: relative;
-  text-align: center;
-  color: #fff;
+  z-index: 10;
+  max-width: 800px;
+  padding: 1rem;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
+.hero h1 {
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.hero-content p.lead {
-  font-size: 1.2rem;
+.hero p.lead {
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
 
 .ctas {
   display: flex;
-  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-/* ===== SECTIONS ===== */
+/* ========================
+   SECTIONS
+======================== */
 .section {
-  padding: 3rem 1rem;
+  padding: 4rem 2rem;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #1f3d1f;
-}
-
+/* Safari Packages Grid */
 .safari-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
 .safari-card {
-  background-color: #f0f9f0;
-  padding: 1rem;
-  border-radius: 8px;
+  background: #eaf2ea;
+  border-radius: 10px;
+  overflow: hidden;
   text-align: center;
+  padding-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.safari-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .safari-card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  height: 180px;
+  object-fit: cover;
 }
 
-/* ===== DESTINATIONS ===== */
+/* Destinations Grid */
 .dest-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-}
-
-.dest-card {
-  background-color: #d6ead6;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
 }
 
 .dest-card img {
   width: 100%;
+  height: 140px;
   object-fit: cover;
-  height: 150px;
+  border-radius: 8px;
 }
 
-/* ===== WHY CHOOSE US ===== */
+/* Why Choose Us */
 .choose-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
 .choose-card {
-  background-color: #c3e6c3;
+  background-color: #eaf2ea;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
 }
 
-/* ===== ABOUT & BOOKING HALF SCREEN ===== */
-.half-section {
-  max-width: 50%;
-  margin: auto;
-}
-
-.about-grid, .booking-form {
-  display: flex;
-  flex-direction: column;
+/* ========================
+   GALLERY
+======================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
+  justify-items: center;
 }
 
-.about-img {
+.gallery-item {
   width: 100%;
-  border-radius: 8px;
+  height: 150px;
   object-fit: cover;
-}
-
-/* ===== BOOKING FORM ===== */
-.booking-form {
-  background-color: #f0f9f0;
-  padding: 1rem;
   border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.booking-form .row.two {
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ========================
+   ABOUT & BOOK FORM
+======================== */
+.half-section .about-grid,
+.half-section .booking-form {
   display: flex;
-  gap: 0.5rem;
   flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.half-section .about-img {
+  flex: 1 1 45%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.half-section div {
+  flex: 1 1 45%;
+}
+
+/* Booking Form */
+.booking-form {
+  background: #eaf2ea;
+  padding: 1.5rem;
+  border-radius: 10px;
 }
 
 .booking-form input,
 .booking-form select,
 .booking-form textarea {
   width: 100%;
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #aaa;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-.booking-form textarea {
-  resize: vertical;
-}
-
-.form-actions {
-  text-align: center;
-}
-
-/* ===== FOOTER ===== */
-.site-footer {
-  background-color: #3a6b3a;
+.booking-form button {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: bold;
+  background-color: #2b6f4b;
   color: #fff;
-  padding: 1rem;
-  text-align: center;
+  border: none;
+  border-radius: 5px;
 }
 
-/* ===== WHATSAPP FLOATING BUTTON ===== */
+.booking-form button:hover {
+  background-color: #1f5a3d;
+}
+
+/* ========================
+   REVIEWS
+======================== */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+blockquote {
+  background-color: #eaf2ea;
+  padding: 1rem;
+  border-left: 5px solid #2b6f4b;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+/* ========================
+   FOOTER
+======================== */
+.site-footer {
+  background-color: #2b6f4b;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* ========================
+   WHATSAPP FLOAT
+======================== */
 .wa-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #25d366;
   color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  text-decoration: none;
+  border-radius: 50%;
+  padding: 0.75rem 1rem;
   font-size: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width: 1024px) {
-  .half-section {
-    max-width: 90%;
-  }
-}
-
-@media(max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 0;
-    background-color: #2d562d;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .nav-links.show {
-    display: flex;
-  }
-  .nav-toggle {
-    display: block;
-  }
- /* ========================
-   DROPDOWNS
-======================== */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #0b4d22; /* darker green */
-  padding: 0.5rem 0;
-  border-radius: 4px;
-  min-width: 180px;
   z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.dropdown-menu li {
-  padding: 0;
-}
+/* ========================
+   MEDIA QUERIES
+======================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
 
-.dropdown-menu button {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  text-align: left;
-  background: none;
-  border: none;
-  color: #e6f5ea;
-  cursor: pointer;
-}
+  .hero p.lead {
+    font-size: 1rem;
+  }
 
-.dropdown-menu button:hover {
-  background: #1a7031;
-  color: #fff;
-}
+  .half-section .about-grid,
+  .half-section .booking-form {
+    flex-direction: column;
+  }
 
+  .half-section .about-img,
+  .half-section div {
+    flex: 1 1 100%;
+  }
 }
