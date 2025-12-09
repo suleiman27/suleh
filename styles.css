@@ -343,4 +343,27 @@ body {
   .nav-toggle {
     display: block;
   }
+  /* ========================
+   EXTRA DROPDOWN FIX — OPEN & CLOSE ON HOVER
+======================== */
+
+/* Ensure dropdown container behaves correctly */
+.nav-links li.dropdown {
+  position: relative;
+}
+
+/* Make dropdown close when mouse leaves the area */
+.nav-links li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-links li.dropdown .dropdown-menu:hover {
+  display: block;
+}
+
+/* Smooth appearance */
+.dropdown-menu {
+  transition: opacity 0.2s ease-in-out;
+}
+
 }
