@@ -248,6 +248,18 @@ img {
   object-fit: cover;
 }
 
+.samb {
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
 /* Destinations Grid */
 .dest-cards {
   display: grid;
